@@ -29,10 +29,10 @@ namespace Project1_AdonetCustomer
         {
 
         }
-
+        SqlConnection sqlConnection = new SqlConnection("Server=ELIFARI\\SQLEXPRESS; initial catalog = DbCustomer;  integrated security= true");
         private void btnListele_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlConnection = new SqlConnection("Server=ELIFARI\\SQLEXPRESS; initial catalog = DbCustomer;  integrated security= true");
+            
             sqlConnection.Open();
             SqlCommand command = new SqlCommand("Select * From TblCity", sqlConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -41,6 +41,17 @@ namespace Project1_AdonetCustomer
             dataGridView1.DataSource = dataTable;
 
             sqlConnection.Close();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            sqlConnection.Open(); 
+            SqlCommand command = new SqlCommand("Insert Into TblCity (CityName,CityCountry) Values (@cityName, @cityCountry)", sqlConnection);
+            command.Parameters.AddWithValue("@cityName", txtCityName.Text);
+            command.Parameters.AddWithValue("@cityCountry", txtCityCountry.Text);
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
+            MessageBox.Show("Şehir eklendi");
         }
     }
 }
