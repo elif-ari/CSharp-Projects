@@ -27,7 +27,12 @@ namespace Project1_AdonetCustomer
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand("Delete From TblCity Where CityId=@cityId", sqlConnection); 
+            command.Parameters.AddWithValue("@cityId", txtCityId.Text);
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
+            MessageBox.Show("Şehir silindi" , "Uyarı" , MessageBoxButtons.OK , MessageBoxIcon.Information);
         }
         SqlConnection sqlConnection = new SqlConnection("Server=ELIFARI\\SQLEXPRESS; initial catalog = DbCustomer;  integrated security= true");
         private void btnListele_Click(object sender, EventArgs e)
@@ -52,6 +57,18 @@ namespace Project1_AdonetCustomer
             command.ExecuteNonQuery();
             sqlConnection.Close();
             MessageBox.Show("Şehir eklendi");
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand("Update TblCity Set CityName=@cityName, CityCountry=@cityCountry Where CityId=@cityId", sqlConnection);
+            command.Parameters.AddWithValue("@cityName", txtCityName.Text);
+            command.Parameters.AddWithValue("@cityCountry", txtCityCountry.Text);
+            command.Parameters.AddWithValue("@cityId", txtCityId.Text);
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
+            MessageBox.Show("Şehir güncellendi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }
