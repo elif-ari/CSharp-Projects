@@ -32,7 +32,6 @@
             this.txtCityId = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnListele = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtCityName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCityCountry = new System.Windows.Forms.TextBox();
@@ -49,7 +48,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label1.Location = new System.Drawing.Point(50, 45);
+            this.label1.Location = new System.Drawing.Point(103, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 17);
             this.label1.TabIndex = 0;
@@ -57,7 +56,7 @@
             // 
             // txtCityId
             // 
-            this.txtCityId.Location = new System.Drawing.Point(115, 43);
+            this.txtCityId.Location = new System.Drawing.Point(183, 41);
             this.txtCityId.Name = "txtCityId";
             this.txtCityId.Size = new System.Drawing.Size(181, 22);
             this.txtCityId.TabIndex = 1;
@@ -67,7 +66,7 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(334, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(398, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -76,7 +75,7 @@
             // 
             // btnListele
             // 
-            this.btnListele.Location = new System.Drawing.Point(115, 185);
+            this.btnListele.Location = new System.Drawing.Point(183, 183);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(181, 23);
             this.btnListele.TabIndex = 3;
@@ -84,20 +83,9 @@
             this.btnListele.UseVisualStyleBackColor = true;
             this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(152, 343);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(103, 20);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // txtCityName
             // 
-            this.txtCityName.Location = new System.Drawing.Point(115, 87);
+            this.txtCityName.Location = new System.Drawing.Point(183, 85);
             this.txtCityName.Name = "txtCityName";
             this.txtCityName.Size = new System.Drawing.Size(181, 22);
             this.txtCityName.TabIndex = 6;
@@ -107,7 +95,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label2.Location = new System.Drawing.Point(41, 89);
+            this.label2.Location = new System.Drawing.Point(94, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 5;
@@ -115,7 +103,7 @@
             // 
             // txtCityCountry
             // 
-            this.txtCityCountry.Location = new System.Drawing.Point(115, 132);
+            this.txtCityCountry.Location = new System.Drawing.Point(183, 130);
             this.txtCityCountry.Name = "txtCityCountry";
             this.txtCityCountry.Size = new System.Drawing.Size(181, 22);
             this.txtCityCountry.TabIndex = 10;
@@ -125,7 +113,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label4.Location = new System.Drawing.Point(67, 134);
+            this.label4.Location = new System.Drawing.Point(120, 130);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 17);
             this.label4.TabIndex = 9;
@@ -133,7 +121,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(115, 272);
+            this.btnUpdate.Location = new System.Drawing.Point(183, 270);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(181, 23);
             this.btnUpdate.TabIndex = 12;
@@ -143,7 +131,7 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(115, 214);
+            this.btnCreate.Location = new System.Drawing.Point(183, 212);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(181, 23);
             this.btnCreate.TabIndex = 13;
@@ -153,7 +141,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(115, 243);
+            this.btnDelete.Location = new System.Drawing.Point(183, 241);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(181, 23);
             this.btnDelete.TabIndex = 14;
@@ -163,7 +151,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(115, 301);
+            this.btnSearch.Location = new System.Drawing.Point(183, 299);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(181, 23);
             this.btnSearch.TabIndex = 15;
@@ -185,7 +173,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCityName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.btnListele);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtCityId);
@@ -206,7 +193,6 @@
         private System.Windows.Forms.TextBox txtCityId;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnListele;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TextBox txtCityName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCityCountry;
