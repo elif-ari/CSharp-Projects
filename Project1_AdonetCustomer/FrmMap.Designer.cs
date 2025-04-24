@@ -51,6 +51,7 @@
             this.btnOpenCustomerForm.TabIndex = 1;
             this.btnOpenCustomerForm.Text = "Müşteri İşlemleri";
             this.btnOpenCustomerForm.UseVisualStyleBackColor = true;
+            this.btnOpenCustomerForm.Click += new System.EventHandler(this.btnOpenCustomerForm_Click);
             // 
             // btnExit
             // 
