@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace Project1_AdonetCustomer
 {
-    public partial class Form1 : Form
+    public partial class FrmCity : Form
     {
         public object SQLConnection { get; private set; }
 
-        public Form1()
+        public FrmCity()
         {
             InitializeComponent();
         }
@@ -82,6 +82,11 @@ namespace Project1_AdonetCustomer
             dataGridView1.DataSource = dataTable;
 
             sqlConnection.Close();
+        }
+
+        private void txtCityId_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Project1_AdonetCustomer
 {
-    partial class Form1
+    partial class FrmCity
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.
@@ -47,10 +47,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 45);
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label1.Location = new System.Drawing.Point(50, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 17);
+            this.label1.Size = new System.Drawing.Size(61, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Şehir Id:";
             // 
@@ -60,7 +61,7 @@
             this.txtCityId.Name = "txtCityId";
             this.txtCityId.Size = new System.Drawing.Size(181, 22);
             this.txtCityId.TabIndex = 1;
-            this.txtCityId.Text = "1";
+            this.txtCityId.TextChanged += new System.EventHandler(this.txtCityId_TextChanged);
             // 
             // dataGridView1
             // 
@@ -100,15 +101,15 @@
             this.txtCityName.Name = "txtCityName";
             this.txtCityName.Size = new System.Drawing.Size(181, 22);
             this.txtCityName.TabIndex = 6;
-            this.txtCityName.Text = "1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 89);
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label2.Location = new System.Drawing.Point(41, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 17);
+            this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Şehir Adı:";
             // 
@@ -118,15 +119,15 @@
             this.txtCityCountry.Name = "txtCityCountry";
             this.txtCityCountry.Size = new System.Drawing.Size(181, 22);
             this.txtCityCountry.TabIndex = 10;
-            this.txtCityCountry.Text = "1";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(56, 134);
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label4.Location = new System.Drawing.Point(67, 134);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 17);
+            this.label4.Size = new System.Drawing.Size(41, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "Ülke:";
             // 
@@ -170,11 +171,11 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // Form1
+            // FrmCity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1311, 450);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
@@ -189,7 +190,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtCityId);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "FrmCity";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "City Prosess Form";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
