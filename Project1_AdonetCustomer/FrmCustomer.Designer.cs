@@ -141,6 +141,7 @@
             this.btnListele.TabIndex = 19;
             this.btnListele.Text = "Listele";
             this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // dataGridView1
             // 
