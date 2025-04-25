@@ -20,7 +20,14 @@ namespace Project1_AdonetCustomer
 
         private void FrmCustomer_Load(object sender, EventArgs e)
         {
-
+            
+            SqlCommand command = new SqlCommand("Select * From TblCity", sqlConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            cmdCity.ValueMember = "CityId";
+            cmdCity.DisplayMember = "CityName";
+            cmdCity.DataSource = dataTable;
+            
         }
         SqlConnection sqlConnection = new SqlConnection("Server=ELIFARI\\SQLEXPRESS; initial catalog = DbCustomer;  integrated security= true");
         private void btnListele_Click(object sender, EventArgs e)
@@ -48,5 +55,33 @@ namespace Project1_AdonetCustomer
 
             sqlConnection.Close();
         }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand("Insert Into TblCustomer (CustomerName, CustomerSurname, CustomerBalance, CustomerStatus, CustomerCity) Values (@customerName, @customerSurname, @customerBalance, @customerStatus, @customerCity)", sqlConnection);
+            command.Parameters.AddWithValue("@customerName", txtCustomerName.Text);
+            command.Parameters.AddWithValue("@customerSurname", txtCustomerSurname.Text);
+            command.Parameters.AddWithValue("@customerBalance", txtBalance.Text);
+            command.Parameters.AddWithValue("@customerCity", cmdCity.SelectedValue);
+            if (rdbActive.Checked)
+            {
+                command.Parameters.AddWithValue("@customerStatus", 1);
+            }
+            if (rdbPassive.Checked)
+            {
+                command.Parameters.AddWithValue("@customerStatus", 0);
+            }
+            command.ExecuteNonQuery();  
+            sqlConnection.Close();
+            MessageBox.Show("Müşteri eklendi");
+        }
+        private void rdbActive_CheckedChanged(object sender, EventArgs e)
+        {
+            // Örneğin:
+            // MessageBox.Show("Aktiflik durumu değişti!");
+        }
+
     }
-}
+
+    }

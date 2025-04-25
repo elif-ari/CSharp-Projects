@@ -77,6 +77,7 @@
             this.btnCreate.TabIndex = 26;
             this.btnCreate.Text = "Ekle";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnUpdate
             // 
@@ -133,6 +134,7 @@
             this.rdbActive.TabStop = true;
             this.rdbActive.Text = "Aktif";
             this.rdbActive.UseVisualStyleBackColor = true;
+            this.rdbActive.CheckedChanged += new System.EventHandler(this.rdbActive_CheckedChanged);
             // 
             // btnListele
             // 
