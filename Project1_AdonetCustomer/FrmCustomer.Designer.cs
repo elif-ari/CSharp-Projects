@@ -47,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmdCity = new System.Windows.Forms.ComboBox();
             this.rdbPassive = new System.Windows.Forms.RadioButton();
+            this.btnProcedure = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,7 +138,7 @@
             // 
             this.btnListele.Location = new System.Drawing.Point(169, 218);
             this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(181, 23);
+            this.btnListele.Size = new System.Drawing.Size(82, 23);
             this.btnListele.TabIndex = 19;
             this.btnListele.Text = "Listele";
             this.btnListele.UseVisualStyleBackColor = true;
@@ -231,12 +232,23 @@
             this.rdbPassive.Text = "Pasif";
             this.rdbPassive.UseVisualStyleBackColor = true;
             // 
+            // btnProcedure
+            // 
+            this.btnProcedure.Location = new System.Drawing.Point(257, 218);
+            this.btnProcedure.Name = "btnProcedure";
+            this.btnProcedure.Size = new System.Drawing.Size(93, 23);
+            this.btnProcedure.TabIndex = 36;
+            this.btnProcedure.Text = "Prosedür";
+            this.btnProcedure.UseVisualStyleBackColor = true;
+            this.btnProcedure.Click += new System.EventHandler(this.btnProcedure_Click);
+            // 
             // FrmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1152, 450);
+            this.Controls.Add(this.btnProcedure);
             this.Controls.Add(this.rdbPassive);
             this.Controls.Add(this.cmdCity);
             this.Controls.Add(this.label3);
@@ -286,5 +298,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmdCity;
         private System.Windows.Forms.RadioButton rdbPassive;
+        private System.Windows.Forms.Button btnProcedure;
     }
 }
