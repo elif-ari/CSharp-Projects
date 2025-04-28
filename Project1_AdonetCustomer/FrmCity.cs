@@ -28,11 +28,11 @@ namespace Project1_AdonetCustomer
         private void btnDelete_Click(object sender, EventArgs e)
         {
             sqlConnection.Open();
-            SqlCommand command = new SqlCommand("Delete From TblCity Where CityId=@cityId", sqlConnection); 
-            command.Parameters.AddWithValue("@cityId", txtCityId.Text);
+            SqlCommand command = new SqlCommand("Delete From TblCustomer Where CustomerId=@customerId", sqlConnection);
+            command.Parameters.AddWithValue("@customerId", txtCityId.Text);
             command.ExecuteNonQuery();
             sqlConnection.Close();
-            MessageBox.Show("Şehir silindi" , "Uyarı" , MessageBoxButtons.OK , MessageBoxIcon.Information);
+            MessageBox.Show("Müşteri silindi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         SqlConnection sqlConnection = new SqlConnection("Server=ELIFARI\\SQLEXPRESS; initial catalog = DbCustomer;  integrated security= true");
         private void btnListele_Click(object sender, EventArgs e)
