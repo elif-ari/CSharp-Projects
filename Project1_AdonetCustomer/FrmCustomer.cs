@@ -93,6 +93,30 @@ namespace Project1_AdonetCustomer
 
             sqlConnection.Close();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand("Update TblCustomer set CustomerName =@customerName , CustomerSurname =@customerSurname, CustomerBalance =  @customerBalance ,CustomerStatus = @customerStatus, CustomerCity = @customerCity) " +
+                "where CustomerId= @customerId", sqlConnection);
+            command.Parameters.AddWithValue("@customerName", txtCustomerName.Text);
+            command.Parameters.AddWithValue("@customerSurname", txtCustomerSurname.Text);
+            command.Parameters.AddWithValue("@customerBalance", txtBalance.Text);
+            command.Parameters.AddWithValue("@customerCity", cmdCity.SelectedValue);
+            command.Parameters.AddWithValue("@customerId", txtCustomerId.Text);
+            if (rdbActive.Checked)
+            {
+                command.Parameters.AddWithValue("@customerStatus", 1);
+            }
+            if (rdbPassive.Checked)
+            {
+                command.Parameters.AddWithValue("@customerStatus", 0);
+            }
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
+            MessageBox.Show("Müşteri güncellendi");
+        }
     }
 
     }
