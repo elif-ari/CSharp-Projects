@@ -93,6 +93,18 @@ namespace Project1_AdonetCustomer
             MessageBox.Show("Müşteri silindi");
         }
 
+
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtCustomerId.Clear();
+            txtCustomerName.Clear();
+            txtCustomerSurname.Clear();
+            txtBalance.Clear();
+            rdbActive.Checked = false;
+            rdbPassive.Checked = false;
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
 
