@@ -24,6 +24,7 @@ namespace Project1_AdonetCustomer
             SqlCommand command = new SqlCommand("Select * From TblCity", sqlConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
             cmdCity.ValueMember = "CityId";
             cmdCity.DisplayMember = "CityName";
             cmdCity.DataSource = dataTable;
@@ -85,13 +86,11 @@ namespace Project1_AdonetCustomer
         private void btnDelete_Click(object sender, EventArgs e)
         {
             sqlConnection.Open();
-            SqlCommand command = new SqlCommand("Select CustomerId, CustomerName, CustomerSurname ,CustomerBalance , CustomerStatus , CityName from TblCustomer \r\nInner Join TblCity on TblCity.CityId = TblCustomer.CustomerCity", sqlConnection);
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
-
+            SqlCommand command = new SqlCommand("DELETE FROM TblCustomer WHERE CustomerId = @customerId", sqlConnection);
+            command.Parameters.AddWithValue("@customerId", txtCustomerId.Text);
+            command.ExecuteNonQuery();
             sqlConnection.Close();
+            MessageBox.Show("Müşteri silindi");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
