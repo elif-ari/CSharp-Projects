@@ -28,5 +28,14 @@ namespace Project1_AdonetCustomer
             FrmCustomer frmCustomer = new FrmCustomer();
             frmCustomer.Show();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Uygulamadan çıkmak istiyor musunuz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
