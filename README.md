@@ -29,3 +29,4 @@ Bu proje, C# ve ADO.NET kullanılarak geliştirilmiş bir müşteri yönetim sis
 3. Projeyi Visual Studio ile açın.
 4. `app.config` dosyasından bağlantı cümlesini (`ConnectionString`) düzenleyin.
 5. Uygulamayı çalıştırın.
+
